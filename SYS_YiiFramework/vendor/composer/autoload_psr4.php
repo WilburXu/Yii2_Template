@@ -13,6 +13,7 @@ return array(
     'yii\\composer\\' => array($vendorDir . '/yiisoft/yii2-composer'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
+    'romankarkachev\\' => array($vendorDir . '/romankarkachev/yii2-homer-admin'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/type-resolver/src', $vendorDir . '/phpdocumentor/reflection-docblock/src'),
     'mdm\\admin\\' => array($vendorDir . '/mdmsoft/yii2-admin'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),

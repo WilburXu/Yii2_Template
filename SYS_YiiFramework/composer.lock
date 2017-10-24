@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "206b19bcf2f2ff54c9631ad72a0c5114",
+    "content-hash": "35fc7be58f22b72366ca8b075c930ab0",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -376,6 +376,48 @@
                 "yii"
             ],
             "time": "2017-10-04T02:54:53+00:00"
+        },
+        {
+            "name": "romankarkachev/yii2-homer-admin",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/romankarkachev/yii2-homer-admin.git",
+                "reference": "6479d9999c444989cabef4f8b55ae5c0ed88f184"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/romankarkachev/yii2-homer-admin/6479d9999c444989cabef4f8b55ae5c0ed88f184.zip",
+                "reference": "6479d9999c444989cabef4f8b55ae5c0ed88f184",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "romankarkachev\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Karkachev",
+                    "email": "post@romankarkachev.ru"
+                }
+            ],
+            "description": "HOMER - Responsive Admin Theme Bootstrap 3 template",
+            "keywords": [
+                "bootstrap 3",
+                "homer-admin",
+                "template",
+                "yii2"
+            ],
+            "time": "2016-12-17T17:01:19+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

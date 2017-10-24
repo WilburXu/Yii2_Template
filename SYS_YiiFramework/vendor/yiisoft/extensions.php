@@ -57,4 +57,13 @@ return array (
       '@mdm/admin' => $vendorDir . '/mdmsoft/yii2-admin',
     ),
   ),
+  'romankarkachev/yii2-homer-admin' => 
+  array (
+    'name' => 'romankarkachev/yii2-homer-admin',
+    'version' => '1.0.1.0',
+    'alias' => 
+    array (
+      '@romankarkachev' => $vendorDir . '/romankarkachev/yii2-homer-admin',
+    ),
+  ),
 );

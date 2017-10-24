@@ -26,6 +26,10 @@ class ComposerStaticInit0da678e43b8020007e6aa6b8b4affe98
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
         ),
+        'r' => 
+        array (
+            'romankarkachev\\' => 15,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -109,6 +113,10 @@ class ComposerStaticInit0da678e43b8020007e6aa6b8b4affe98
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'romankarkachev\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/romankarkachev/yii2-homer-admin',
         ),
         'phpDocumentor\\Reflection\\' => 
         array (

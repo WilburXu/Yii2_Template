@@ -19,7 +19,8 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "vlucas/phpdotenv": "^2.4",
-        "mdmsoft/yii2-admin": "~2.0"
+        "mdmsoft/yii2-admin": "~2.0",
+        "romankarkachev/yii2-homer-admin": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

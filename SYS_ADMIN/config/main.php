@@ -11,9 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'SYS_ADMIN\controllers',
     'bootstrap' => ['log'],
+    'defaultRoute' => 'home/index',
     'modules' => [
         "admin" => [
             "class" => 'mdm\admin\Module',
+            'layout' => 'left-menu',//yii2-admin的导航菜单
         ],
     ],
     'components' => [
@@ -23,7 +25,7 @@ return [
         ],
         'user' => [
             'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
             'identityCookie' => ['name' => '_identity-SYS_ADMIN', 'httpOnly' => true],
         ],
         'session' => [
@@ -58,7 +60,10 @@ return [
         ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // 使用数据库管理配置文件
-        ]
+        ],
+        'assetManager' => [
+            'linkAssets' => true,
+        ],
     ],
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
