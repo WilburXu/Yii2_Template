@@ -15,7 +15,7 @@ return [
     'components' => [
         'request' => [
 //            'csrfParam' => '_csrf-backend',
-            'cookieValidationKey' => true,
+            'cookieValidationKey' => 'qxtDCdvQh-RCSC_urAKhrarouDleMVZl',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -43,6 +43,15 @@ return [
             'showScriptName' => false,
             'rules' => [
             ],
+        ],
+
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => getenv('YII_DB_SYS_DSN'),
+            'username' => getenv('YII_DB_SYS_USER'),
+            'password' => getenv('YII_DB_SYS_PASS'),
+            'charset' => 'utf8',
+            'tablePrefix' => getenv('YII_DB_SYS_PRE')
         ],
     ],
     'params' => $params,
