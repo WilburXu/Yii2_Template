@@ -1,0 +1,407 @@
+2017-10-24 07:27:32 [-][-][-][error][yii\base\InvalidConfigException] ReflectionException: Class db does not exist in C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\di\Container.php:424
+Stack trace:
+#0 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\di\Container.php(424): ReflectionClass->__construct('db')
+#1 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\di\Container.php(364): yii\di\Container->getDependencies('db')
+#2 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('db', Array, Array)
+#3 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\di\Instance.php(166): yii\di\Container->get('db')
+#4 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\di\Instance.php(137): yii\di\Instance->get(NULL)
+#5 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\MigrateController.php(170): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Controller.php(154): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('', Array)
+#8 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('', Array)
+#9 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#10 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#11 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\yii(27): yii\base\Application->run()
+#13 {main}
+
+Next yii\base\InvalidConfigException: Failed to instantiate component or class "db". in C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\di\Instance.php:139
+Stack trace:
+#0 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\MigrateController.php(170): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#1 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Controller.php(154): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#2 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('', Array)
+#3 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('', Array)
+#4 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#5 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#6 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\yii(27): yii\base\Application->run()
+#8 {main}
+2017-10-24 07:27:32 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => '/mingw32/share/aclocal:/usr/share/aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\ws\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SZ16112580'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files (x86)\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GTK_BASEPATH' => 'C:\\Program Files (x86)\\GtkSharp\\2.12\\'
+    'HOME' => 'C:\\Users\\ws'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\ws'
+    'HOSTNAME' => 'sz16112580'
+    'INFOPATH' => '/usr/local/info:/usr/share/info:/usr/info:/share/info:'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\ws\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SZ16112580'
+    'MANPATH' => '/mingw32/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man:'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\ws\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\local\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Users\\ws\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client;C:\\Program Files\\Intel\\iCLS Client;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\wamp64\\bin\\php\\php7.0.10;C:\\ProgramData\\ComposerSetup\\bin;F:\\development\\phantomjs\\bin;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Users\\ws\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\Git\\usr\\bin\\vendor_perl;C:\\Program Files (x86)\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => '/mingw32/lib/pkgconfig:/mingw32/share/pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => '/c/wamp64/www/Yii2_Template/SYS_YiiFramework'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files (x86)\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => '/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'SZ16112580'
+    'USERNAME' => 'ws'
+    'USERPROFILE' => 'C:\\Users\\ws'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_' => '/usr/bin/winpty'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1508830052.3192
+    'REQUEST_TIME' => 1508830052
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'YII_DB_SYS_DSN' => 'mysql:host=localhost;dbname=template'
+    'YII_DB_SYS_USER' => 'root'
+    'YII_DB_SYS_PASS' => ''
+    'YII_DB_SYS_PRE' => 'sys_'
+]
+2017-10-24 07:28:37 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'sys_user' already exists in C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\db\Migration.php(288): yii\db\Command->execute()
+#2 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\console\migrations\m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(671): m130524_201442_init->up()
+#4 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('', Array)
+#10 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'sys_user' already exists
+The SQL being executed was: CREATE TABLE `sys_user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255) UNIQUE,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `s...')
+#1 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\db\Migration.php(288): yii\db\Command->execute()
+#2 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\console\migrations\m130524_201442_init.php(25): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(671): m130524_201442_init->up()
+#4 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('', Array)
+#10 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'sys_user' already exists
+)
+
+2017-10-24 07:28:34 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => '/mingw32/share/aclocal:/usr/share/aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\ws\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SZ16112580'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files (x86)\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GTK_BASEPATH' => 'C:\\Program Files (x86)\\GtkSharp\\2.12\\'
+    'HOME' => 'C:\\Users\\ws'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\ws'
+    'HOSTNAME' => 'sz16112580'
+    'INFOPATH' => '/usr/local/info:/usr/share/info:/usr/info:/share/info:'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\ws\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SZ16112580'
+    'MANPATH' => '/mingw32/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man:'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OLDPWD' => '/c/wamp64/www/Yii2_Template'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\ws\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\local\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Users\\ws\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client;C:\\Program Files\\Intel\\iCLS Client;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\wamp64\\bin\\php\\php7.0.10;C:\\ProgramData\\ComposerSetup\\bin;F:\\development\\phantomjs\\bin;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Users\\ws\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\Git\\usr\\bin\\vendor_perl;C:\\Program Files (x86)\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => '/mingw32/lib/pkgconfig:/mingw32/share/pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => '/c/wamp64/www/Yii2_Template/SYS_YiiFramework'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files (x86)\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => '/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'SZ16112580'
+    'USERNAME' => 'ws'
+    'USERPROFILE' => 'C:\\Users\\ws'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_' => '/usr/bin/winpty'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1508830114.2507
+    'REQUEST_TIME' => 1508830114
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+    'YII_DB_SYS_DSN' => 'mysql:host=localhost;dbname=template'
+    'YII_DB_SYS_USER' => 'root'
+    'YII_DB_SYS_PASS' => ''
+    'YII_DB_SYS_PRE' => 'sys_'
+]
+2017-10-24 07:31:38 [-][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: You should configure "authManager" component to use database before executing this migration. in C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php:27
+Stack trace:
+#0 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\rbac\migrations\m140506_102106_rbac_init.php(50): m140506_102106_rbac_init->getAuthManager()
+#1 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(671): m140506_102106_rbac_init->up()
+#2 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m140506_102106_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('up', Array)
+#7 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('up', Array)
+#8 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/up', Array)
+#9 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/up', Array)
+#10 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 C:\wamp64\www\Yii2_Template\SYS_YiiFramework\yii(27): yii\base\Application->run()
+#12 {main}
+2017-10-24 07:31:36 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => '/mingw32/share/aclocal:/usr/share/aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\ws\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SZ16112580'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files (x86)\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GTK_BASEPATH' => 'C:\\Program Files (x86)\\GtkSharp\\2.12\\'
+    'HOME' => 'C:\\Users\\ws'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\ws'
+    'HOSTNAME' => 'sz16112580'
+    'INFOPATH' => '/usr/local/info:/usr/share/info:/usr/info:/share/info:'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\ws\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SZ16112580'
+    'MANPATH' => '/mingw32/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man:'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OLDPWD' => '/c/wamp64/www/Yii2_Template'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\ws\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\local\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Users\\ws\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client;C:\\Program Files\\Intel\\iCLS Client;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\wamp64\\bin\\php\\php7.0.10;C:\\ProgramData\\ComposerSetup\\bin;F:\\development\\phantomjs\\bin;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Users\\ws\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\Git\\usr\\bin\\vendor_perl;C:\\Program Files (x86)\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => '/mingw32/lib/pkgconfig:/mingw32/share/pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => '/c/wamp64/www/Yii2_Template/SYS_YiiFramework'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files (x86)\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => '/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'SZ16112580'
+    'USERNAME' => 'ws'
+    'USERPROFILE' => 'C:\\Users\\ws'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_' => '/usr/bin/winpty'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1508830296.0741
+    'REQUEST_TIME' => 1508830296
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/up'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+    'YII_DB_SYS_DSN' => 'mysql:host=localhost;dbname=template'
+    'YII_DB_SYS_USER' => 'root'
+    'YII_DB_SYS_PASS' => ''
+    'YII_DB_SYS_PRE' => 'sys_'
+]
+2017-10-24 08:02:48 [-][-][-][error][application] Failed to instantiate component or class "authManager".
+2017-10-24 08:02:44 [-][-][-][info][application] $_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files (x86)\\Git\\mingw32\\share\\aclocal;C:\\Program Files (x86)\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\ws\\AppData\\Roaming'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SZ16112580'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files (x86)\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GTK_BASEPATH' => 'C:\\Program Files (x86)\\GtkSharp\\2.12\\'
+    'HOME' => 'C:\\Users\\ws'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\ws'
+    'HOSTNAME' => 'sz16112580'
+    'INFOPATH' => 'C:\\Program Files (x86)\\Git\\usr\\local\\info;C:\\Program Files (x86)\\Git\\usr\\share\\info;C:\\Program Files (x86)\\Git\\usr\\info;C:\\Program Files (x86)\\Git\\share\\info'
+    'LANG' => 'zh_CN.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\ws\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SZ16112580'
+    'MANPATH' => 'C:\\Program Files (x86)\\Git\\mingw32\\share\\man;C:\\Program Files (x86)\\Git\\usr\\local\\man;C:\\Program Files (x86)\\Git\\usr\\share\\man;C:\\Program Files (x86)\\Git\\usr\\man;C:\\Program Files (x86)\\Git\\share\\man'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OLDPWD' => 'C:/wamp64/www/Yii2_Template'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\ws\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\local\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Program Files (x86)\\Git\\mingw32\\bin;C:\\Program Files (x86)\\Git\\usr\\bin;C:\\Users\\ws\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client;C:\\Program Files\\Intel\\iCLS Client;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\TortoiseGit\\bin;C:\\wamp64\\bin\\php\\php7.0.10;C:\\ProgramData\\ComposerSetup\\bin;F:\\development\\phantomjs\\bin;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Users\\ws\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\Git\\usr\\bin\\vendor_perl;C:\\Program Files (x86)\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files (x86)\\Git\\mingw32\\lib\\pkgconfig;C:\\Program Files (x86)\\Git\\mingw32\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PRINTER' => 'Microsoft XPS Document Writer'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PS1' => '\\[\\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ '
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'C:/wamp64/www/Yii2_Template/SYS_YiiFramework'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files (x86)\\Git\\usr\\bin\\bash'
+    'SHLVL' => '1'
+    'SSH_ASKPASS' => 'C:/Program Files (x86)/Git/mingw32/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ws\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'SZ16112580'
+    'USERNAME' => 'ws'
+    'USERPROFILE' => 'C:\\Users\\ws'
+    'WINDIR' => 'C:\\Windows'
+    '_' => './yii'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1508832164.499
+    'REQUEST_TIME' => 1508832164
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@mdm/admin/migrations'
+    ]
+    'argc' => 3
+    'YII_DB_SYS_DSN' => 'mysql:host=localhost;dbname=template'
+    'YII_DB_SYS_USER' => 'root'
+    'YII_DB_SYS_PASS' => ''
+    'YII_DB_SYS_PRE' => 'sys_'
+]
