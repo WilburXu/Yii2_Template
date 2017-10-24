@@ -11,7 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'SYS_ADMIN\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        "admin" => [
+            "class" => 'mdm\admin\Module',
+        ],
+    ],
     'components' => [
         'request' => [
 //            'csrfParam' => '_csrf-backend',
@@ -44,7 +48,6 @@ return [
             'rules' => [
             ],
         ],
-
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => getenv('YII_DB_SYS_DSN'),
@@ -53,6 +56,17 @@ return [
             'charset' => 'utf8',
             'tablePrefix' => getenv('YII_DB_SYS_PRE')
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager', // 使用数据库管理配置文件
+        ]
     ],
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            '*'
+            //controller/action
+        ]
+    ],
+
     'params' => $params,
 ];
