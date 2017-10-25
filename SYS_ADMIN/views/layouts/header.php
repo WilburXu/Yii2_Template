@@ -155,7 +155,7 @@ use SYS_ADMIN\assets\AppAsset;
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a href="login.html">
+                    <a href="/login/logout">
                         <i class="pe-7s-upload pe-rotate-90"></i>
                     </a>
                 </li>

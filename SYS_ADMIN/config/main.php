@@ -15,7 +15,7 @@ return [
     'modules' => [
         "admin" => [
             "class" => 'mdm\admin\Module',
-            'layout' => 'left-menu',//yii2-admin的导航菜单
+//            'layout' => 'left-menu',//yii2-admin的导航菜单
         ],
     ],
     'components' => [
@@ -27,6 +27,7 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => false,
             'identityCookie' => ['name' => '_identity-SYS_ADMIN', 'httpOnly' => true],
+            'loginUrl' => ['login/login'],
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
@@ -68,8 +69,8 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            '*'
-            //controller/action
+//            '*',
+            'login/*',
         ]
     ],
 
