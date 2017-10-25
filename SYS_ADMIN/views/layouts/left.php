@@ -1,5 +1,8 @@
 <?php
 use SYS_ADMIN\assets\AppAsset;
+
+$menu = \mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id);
+$menu = (isset($menu) && is_array($menu)) ? $menu : [];
 ?>
 
 
