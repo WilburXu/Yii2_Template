@@ -5,20 +5,6 @@ use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Page title -->
-    <title>HOMER | WebApp admin theme</title>
-
-
-</head>
-<body class="blank">
 
 <!-- Simple splash screen-->
 <div class="splash">
@@ -67,7 +53,7 @@ $this->title = 'Login';
                     <div class="form-group">
                         <?= Html::submitButton('Login', ['class' => 'btn btn-success btn-block', 'name' => 'login-button']) ?>
                     </div>
-                    <a class="btn btn-default btn-block" href="#">Register</a>
+                    <a class="btn btn-default btn-block" href="/login/register">Register</a>
                     <?php ActiveForm::end(); ?>
                 </div>
             </div>
@@ -79,5 +65,3 @@ $this->title = 'Login';
         </div>
     </div>
 </div>
-</body>
-</html>

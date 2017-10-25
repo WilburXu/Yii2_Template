@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use SYS_ADMIN\assets\AppAsset;
@@ -29,11 +30,12 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/romankarkach
     ['directoryAsset' => $directoryAsset]
 ) ?>
 
-<?= $this->render('left.php',[
+<?= $this->render('left.php', [
         'directoryAsset' => $directoryAsset,
     ]
 )
 ?>
+
 <div id="wrapper">
     <?= $this->render(
         'content.php',

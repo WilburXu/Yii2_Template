@@ -1,10 +1,12 @@
 <?php
+
 namespace SYS_ADMIN\controllers;
 
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use SYS_ADMIN\models\SignupForm;
 
 /**
  * Site controller
@@ -69,7 +71,7 @@ class LoginController extends BaseController
             return $this->redirect("/home/index");
         } else {
             $this->layout = 'only_content';
-            return $this->render('index', [
+            return $this->render('login', [
                 'model' => $model,
             ]);
         }
@@ -80,7 +82,12 @@ class LoginController extends BaseController
      */
     public function actionRegister()
     {
+        $model = new SignupForm();
 
+        $this->layout = 'only_content';
+        return $this->render('register', [
+            'model' => $model
+        ]);
     }
 
     /**

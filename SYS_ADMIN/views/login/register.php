@@ -1,0 +1,67 @@
+<?php
+
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Html;
+
+?>
+<!-- Simple splash screen-->
+<div class="splash">
+    <div class="color-line"></div>
+    <div class="splash-title"><h1>Homer - Responsive Admin Theme</h1>
+        <p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p>
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+</div>
+<!--[if lt IE 7]>
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="color-line"></div>
+<div class="back-link">
+    <a href="/login/login" class="btn btn-primary">Back to Dashboard</a>
+</div>
+<div class="register-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center m-b-md">
+                <h3>Registration</h3>
+                <small>Full suported AngularJS WebApp/Admin template with very clean and aesthetic style prepared for
+                    your next app.
+                </small>
+            </div>
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div class="row">
+                        <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+                        <div class="form-group col-lg-12">
+                            <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <?= $form->field($model, 'password')->passwordInput() ?>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <?= $form->field($model, 'email') ?>
+                        </div>
+                        <div class="text-center col-lg-12">
+                            <?= Html::submitButton('Register', ['class' => 'btn btn-success', 'name' => 'signup-button']) ?>
+                            <button class="btn btn-default">Cancel</button>
+                        </div>
+                        <?php ActiveForm::end(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <strong>HOMER</strong> - AngularJS Responsive WebApp <br/> 2015 Copyright Company Name
+        </div>
+    </div>
+</div>

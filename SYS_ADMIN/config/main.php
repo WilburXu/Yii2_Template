@@ -17,6 +17,7 @@ return [
             "class" => 'mdm\admin\Module',
 //            'layout' => 'left-menu',//yii2-admin的导航菜单
         ],
+        'gii' => ['class' => 'yii\gii\Module']
     ],
     'components' => [
         'request' => [
