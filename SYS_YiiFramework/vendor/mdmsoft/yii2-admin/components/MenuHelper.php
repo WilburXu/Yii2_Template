@@ -125,8 +125,8 @@ class MenuHelper
                 ]));
             }
         }
-
         $key = [__METHOD__, $assigned, $root];
+        $result = $cache->delete($key);
         if ($refresh || $callback !== null || $cache === null || (($result = $cache->get($key)) === false)) {
             $result = static::normalizeMenu($assigned, $menus, $callback, $root);
             if ($cache !== null && $callback === null) {
@@ -201,10 +201,35 @@ class MenuHelper
                 if ($callback !== null) {
                     $item = call_user_func($callback, $menu);
                 } else {
+                    $data = ['status' => 1, 'not_display_child' => 0, 'class' => ''];
+                    if (!empty($menu['data'])) {
+                        $menu_data = [];
+                        $menu_data = json_decode($menu['data'], true);
+
+                        if (isset($menu_data['status'])) {
+                            $data['status'] = $menu_data['status'];
+                        }
+
+                        if (isset($menu_data['not_display_child'])) {
+                            $data['not_display_child'] = $menu_data['not_display_child'];
+                        }
+
+                        if (isset($menu_data['class'])) {
+                            $data['class'] = $menu_data['class'];
+                        }
+                    }
+
                     $item = [
-                        'label' => Yii::t('rbac-admin',$menu['name']),
+                        'label' => $menu['name'],
                         'url' => static::parseRoute($menu['route']),
+//                        'title' => $menu['title'],
+                        'options' => ['class' => $data['class']],
+                        'data' => $data,
                     ];
+                    if ($menu['children'] != []) {
+                        $item['items'] = $menu['children'];
+                    }
+
                     if ($menu['children'] != []) {
                         $item['items'] = $menu['children'];
                     }

@@ -1,3 +1,10 @@
+<?php
+
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+
+$this->title = 'Login';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,15 +21,28 @@
 <body class="blank">
 
 <!-- Simple splash screen-->
-<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<div class="splash">
+    <div class="color-line"></div>
+    <div class="splash-title"><h1>Homer - Responsive Admin Theme</h1>
+        <p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p>
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+</div>
 <!--[if lt IE 7]>
-<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <div class="color-line"></div>
 
 <div class="back-link">
-    <a href="index.html" class="btn btn-primary">Back to Dashboard</a>
+    <a href="#" class="btn btn-primary">Back to Dashboard</a>
 </div>
 
 <div class="login-container">
@@ -34,25 +54,21 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
-                            <div class="form-group">
-                                <label class="control-label" for="username">Username</label>
-                                <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
-                                <span class="help-block small">Your unique username to app</span>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label" for="password">Password</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
-                                <span class="help-block small">Yur strong password</span>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" class="i-checks" checked>
-                                     Remember login
-                                <p class="help-block small">(if this is a private computer)</p>
-                            </div>
-                            <button class="btn btn-success btn-block">Login</button>
-                            <a class="btn btn-default btn-block" href="#">Register</a>
-                        </form>
+                    <?php $form = ActiveForm::begin(['id' => 'loginForm']); ?>
+                    <div class="form-group">
+                        <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                    </div>
+                    <div class="form-group">
+                        <?= $form->field($model, 'password')->textInput(['autofocus' => true]) ?>
+                    </div>
+                    <div class="checkbox">
+                        <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                    </div>
+                    <div class="form-group">
+                        <?= Html::submitButton('Login', ['class' => 'btn btn-success btn-block', 'name' => 'login-button']) ?>
+                    </div>
+                    <a class="btn btn-default btn-block" href="#">Register</a>
+                    <?php ActiveForm::end(); ?>
                 </div>
             </div>
         </div>
@@ -63,19 +79,5 @@
         </div>
     </div>
 </div>
-
-
-<!-- Vendor scripts -->
-<script src="vendor/jquery/dist/jquery.min.js"></script>
-<script src="vendor/jquery-ui/jquery-ui.min.js"></script>
-<script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
-<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
-<script src="vendor/iCheck/icheck.min.js"></script>
-<script src="vendor/sparkline/index.js"></script>
-
-<!-- App scripts -->
-<script src="scripts/homer.js"></script>
-
 </body>
 </html>

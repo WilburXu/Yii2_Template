@@ -59,8 +59,19 @@ class LoginController extends BaseController
      */
     public function actionIndex()
     {
-        $this->layout = 'only_content';
-        return $this->render('index');
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->redirect("/home/index");
+        } else {
+            $this->layout = 'only_content';
+            return $this->render('index', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
