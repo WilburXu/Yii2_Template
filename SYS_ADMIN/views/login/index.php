@@ -59,7 +59,7 @@ $this->title = 'Login';
                         <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
                     </div>
                     <div class="form-group">
-                        <?= $form->field($model, 'password')->textInput(['autofocus' => true]) ?>
+                        <?= $form->field($model, 'password')->passwordInput(['autofocus' => true]) ?>
                     </div>
                     <div class="checkbox">
                         <?= $form->field($model, 'rememberMe')->checkbox() ?>

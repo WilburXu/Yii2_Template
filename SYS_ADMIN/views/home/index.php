@@ -410,7 +410,7 @@
                 <div class="social-talk">
                     <div class="media social-profile clearfix">
                         <a class="pull-left">
-                            <img src="images/a1.jpg" alt="profile-picture">
+                            <img src="/images/a1.jpg" alt="profile-picture">
                         </a>
 
                         <div class="media-body">
@@ -425,7 +425,7 @@
                 <div class="social-talk">
                     <div class="media social-profile clearfix">
                         <a class="pull-left">
-                            <img src="images/a3.jpg" alt="profile-picture">
+                            <img src="/images/a3.jpg" alt="profile-picture">
                         </a>
 
                         <div class="media-body">
@@ -440,7 +440,7 @@
                 <div class="social-talk">
                     <div class="media social-profile clearfix">
                         <a class="pull-left">
-                            <img src="images/a4.jpg" alt="profile-picture">
+                            <img src="/images/a4.jpg" alt="profile-picture">
                         </a>
 
                         <div class="media-body">

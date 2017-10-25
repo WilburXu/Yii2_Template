@@ -11,7 +11,7 @@ $menu = (isset($menu) && is_array($menu)) ? $menu : [];
     <div id="navigation">
         <div class="profile-picture">
             <a href="index.php">
-                <img src="images/profile.jpg" class="img-circle m-b" alt="logo">
+                <img src="/images/profile.jpg" class="img-circle m-b" alt="logo">
             </a>
 
             <div class="stats-label text-color">
