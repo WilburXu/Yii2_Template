@@ -54,7 +54,7 @@ use yii\helpers\Html;
                         </div>
                         <div class="text-center col-lg-12">
                             <?= Html::submitButton('Register', ['class' => 'btn btn-success', 'name' => 'signup-button']) ?>
-                            <button class="btn btn-default">Cancel</button>
+                            <a class="btn btn-default" href="/login/login">Cancel</a>
                         </div>
                         <?php ActiveForm::end(); ?>
                     </div>
