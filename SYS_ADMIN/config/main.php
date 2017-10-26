@@ -72,6 +72,7 @@ return [
         'allowActions' => [
 //            '*',
             'login/*',
+            'demo/*',
         ]
     ],
 

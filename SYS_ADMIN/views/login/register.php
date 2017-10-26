@@ -47,6 +47,9 @@ use yii\helpers\Html;
                             <?= $form->field($model, 'password')->passwordInput() ?>
                         </div>
                         <div class="form-group col-lg-6">
+                            <?= $form->field($model, 'passwordConfirm')->passwordInput() ?>
+                        </div>
+                        <div class="form-group col-lg-6">
                             <?= $form->field($model, 'email') ?>
                         </div>
                         <div class="text-center col-lg-12">
