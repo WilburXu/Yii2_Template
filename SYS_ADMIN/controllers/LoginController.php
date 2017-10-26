@@ -83,11 +83,15 @@ class LoginController extends BaseController
     public function actionRegister()
     {
         $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post()) && $model->signup()) {
+            return $this->redirect(['/login/login']);
+        } else {
+            $this->layout = 'only_content';
+            return $this->render('register', [
+                'model' => $model
+            ]);
+        }
 
-        $this->layout = 'only_content';
-        return $this->render('register', [
-            'model' => $model
-        ]);
     }
 
     /**
