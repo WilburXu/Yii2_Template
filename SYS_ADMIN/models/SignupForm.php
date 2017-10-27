@@ -4,6 +4,7 @@ namespace SYS_ADMIN\models;
 
 use yii\base\Model;
 use common\models\User;
+use yii\captcha\Captcha;
 
 /**
  * Signup form
@@ -11,9 +12,10 @@ use common\models\User;
 class SignupForm extends Model
 {
     public $username;
-    public $email;
     public $password;
     public $passwordConfirm;
+    public $phone;
+    public $verifyCode;
 
     /**
      * @inheritdoc
@@ -26,15 +28,16 @@ class SignupForm extends Model
             ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
             ['username', 'string', 'min' => 2, 'max' => 255],
 
-            ['email', 'trim'],
-            ['email', 'required', 'message' => '邮箱必填.'],
-            ['email', 'email'],
-            ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
+            ['phone', 'trim'],
+            ['phone', 'required', 'message' => '手机号必填.'],
+            ['phone', 'string', 'max' => 20],
+            ['phone', 'string', 'min' => 11],
 
             ['password', 'required', 'message' => '密码必填.'],
             ['password', 'string', 'min' => 6, 'message' => '不能少于6位.'],
             ['passwordConfirm', 'compare', 'compareAttribute' => 'password', 'message' => '两次密码不一致.'],
+
+            ['verifyCode', 'captcha', 'captchaAction'=>'/login/captcha', 'message'=> '请输入正确的验证码.'],
         ];
     }
 
@@ -69,6 +72,7 @@ class SignupForm extends Model
             'password' => '用户密码',
             'email' => '邮箱',
             'passwordConfirm' => '确认密码',
+            'phone' => '手机号',
         ];
     }
 }

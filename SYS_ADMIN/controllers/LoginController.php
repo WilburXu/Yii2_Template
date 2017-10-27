@@ -16,31 +16,17 @@ class LoginController extends BaseController
     /**
      * @inheritdoc
      */
-//    public function behaviors()
-//    {
-//        return [
-//            'access' => [
-//                'class' => AccessControl::className(),
-//                'rules' => [
-//                    [
-//                        'actions' => ['login', 'error', 'index','logout'],
-//                        'allow' => true,
-//                    ],
-//                    [
-//                        'actions' => ['logout', 'index'],
-//                        'allow' => true,
-//                        'roles' => ['@'],
-//                    ],
-//                ],
-//            ],
-//            'verbs' => [
-//                'class' => VerbFilter::className(),
-//                'actions' => [
-//                    'logout' => ['post'],
-//                ],
-//            ],
-//        ];
-//    }
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    }
 
     /**
      * @inheritdoc
@@ -48,8 +34,18 @@ class LoginController extends BaseController
     public function actions()
     {
         return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'backColor' => 0x000000, //背景颜色
+                'maxLength' => 4, //最大显示个数
+                'minLength' => 4, //最少显示个数
+                'padding' => 5, //间距
+                'height' => 35, //高度
+                'width' => 90, //宽度
+                'foreColor' => 0xffffff, //字体颜色
+                'offset' => 4, //设置字符偏移量 有效果
+                //'controller'=>'login',        //拥有这个动作的controller
             ],
         ];
     }
@@ -76,6 +72,8 @@ class LoginController extends BaseController
             ]);
         }
     }
+
+
 
     /**
      * Register action

@@ -50,7 +50,15 @@ use yii\helpers\Html;
                             <?= $form->field($model, 'passwordConfirm')->passwordInput() ?>
                         </div>
                         <div class="form-group col-lg-6">
-                            <?= $form->field($model, 'email') ?>
+                            <?= $form->field($model, 'phone') ?>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <?= $form->field($model, 'verifyCode')->widget(\yii\captcha\Captcha::className(), [
+                                'template' => '<div class="row form-group"><div class="col-xs-7">{input}</div><div class="col-xs-5">{image}</div></div>',
+                            ]);
+                            ?>
+                            <?= \yii\captcha\Captcha::widget(['name'=>'captchaimg','captchaAction'=>'login/captcha','imageOptions'=>['id'=>'captchaimg', 'title'=>'换一个', 'alt'=>'换一个', 'style'=>'cursor:pointer;margin-left:25px;'],'template'=>'{image}']);?>
+                            <?= $form->field($model, 'verifyCode') ?>
                         </div>
                         <div class="text-center col-lg-12">
                             <?= Html::submitButton('Register', ['class' => 'btn btn-success', 'name' => 'signup-button']) ?>
