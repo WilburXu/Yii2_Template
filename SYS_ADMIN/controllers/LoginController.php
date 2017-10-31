@@ -3,10 +3,9 @@
 namespace SYS_ADMIN\controllers;
 
 use Yii;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use common\models\LoginForm;
 use SYS_ADMIN\models\SignupForm;
+use yii\bootstrap\Alert;
 
 /**
  * Site controller
@@ -73,8 +72,6 @@ class LoginController extends BaseController
         }
     }
 
-
-
     /**
      * Register action
      */
@@ -82,6 +79,7 @@ class LoginController extends BaseController
     {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
+            Yii::$app->getSession()->setFlash('success', '注册成功.');
             return $this->redirect(['/login/login']);
         } else {
             $this->layout = 'only_content';

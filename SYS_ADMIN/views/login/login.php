@@ -2,8 +2,18 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\bootstrap\Alert;
 
 $this->title = 'Login';
+
+if( Yii::$app->getSession()->hasFlash('success') ) {
+    echo Alert::widget([
+        'options' => [
+            'class' => 'alert-success', //这里是提示框的class
+        ],
+        'body' => Yii::$app->getSession()->getFlash('success'), //消息体
+    ]);
+}
 ?>
 
 <!-- Simple splash screen-->
