@@ -38,34 +38,39 @@ use yii\helpers\Html;
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                    <div class="row">
                         <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
-                        <div class="form-group col-lg-12">
-                            <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                            </div>
                         </div>
-                        <div class="form-group col-lg-6">
-                            <?= $form->field($model, 'password')->passwordInput() ?>
+                        <div class="row">
+                            <div class="form-group col-lg-6 m-b-sm">
+                                <?= $form->field($model, 'password')->passwordInput() ?>
+                            </div>
+                            <div class="form-group col-lg-6 m-b-sm">
+                                <?= $form->field($model, 'passwordConfirm')->passwordInput() ?>
+                            </div>
                         </div>
-                        <div class="form-group col-lg-6">
-                            <?= $form->field($model, 'passwordConfirm')->passwordInput() ?>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <?= $form->field($model, 'phone') ?>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <?= $form->field($model, 'verifyCode')->widget(\yii\captcha\Captcha::className(), [
-                                'template' => '<div class="row form-group"><div class="col-xs-7">{input}</div><div class="col-xs-5">{image}</div></div>',
-                            ]);
-                            ?>
-                            <?= \yii\captcha\Captcha::widget(['name'=>'captchaimg','captchaAction'=>'login/captcha','imageOptions'=>['id'=>'captchaimg', 'title'=>'换一个', 'alt'=>'换一个', 'style'=>'cursor:pointer;margin-left:25px;'],'template'=>'{image}']);?>
-                            <?= $form->field($model, 'verifyCode') ?>
+                        <div class="row">
+                            <div class="form-group col-lg-6 m-b-sm">
+                                <?= $form->field($model, 'phone') ?>
+                            </div>
+                            <div class="form-group col-lg-6 m-b-sm">
+                                <?= $form->field($model, 'verifyCode')->widget(\yii\captcha\Captcha::className(), [
+                                    'name' => 'captchaimg',
+                                    'captchaAction' => 'login/captcha',
+                                    'template' => '<div class="row form-group"><div class="col-xs-7">{input}</div><div class="col-xs-5">{image}</div></div>',
+                                    'imageOptions' => ['id' => 'captchaimg', 'title' => '换一个', 'alt' => '换一个', 'style' => 'cursor:pointer;margin-left:2px;'],
+                                ]);
+                                ?>
+                            </div>
                         </div>
                         <div class="text-center col-lg-12">
                             <?= Html::submitButton('Register', ['class' => 'btn btn-success', 'name' => 'signup-button']) ?>
                             <a class="btn btn-default" href="/login/login">Cancel</a>
                         </div>
                         <?php ActiveForm::end(); ?>
-                    </div>
                 </div>
             </div>
         </div>

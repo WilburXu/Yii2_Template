@@ -73,6 +73,7 @@ class SignupForm extends Model
             'email' => '邮箱',
             'passwordConfirm' => '确认密码',
             'phone' => '手机号',
+            'verifyCode' => '验证码',
         ];
     }
 }
