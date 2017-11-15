@@ -3,7 +3,7 @@ namespace SYS_ADMIN\controllers;
 
 use yii\web\Controller;
 
-class BaseController extends Controller
+class CommonController extends Controller
 {
     public function init()
     {

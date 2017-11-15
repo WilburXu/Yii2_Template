@@ -1,7 +1,7 @@
 <?php
 namespace SYS_ADMIN\controllers;
 
-class DemoController extends BaseController
+class DemoController extends CommonController
 {
     /**
      * Site Index

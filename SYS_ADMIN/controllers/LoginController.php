@@ -10,7 +10,7 @@ use yii\bootstrap\Alert;
 /**
  * Site controller
  */
-class LoginController extends BaseController
+class LoginController extends CommonController
 {
     /**
      * @inheritdoc

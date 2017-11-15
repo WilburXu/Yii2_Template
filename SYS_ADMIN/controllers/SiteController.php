@@ -9,7 +9,7 @@ use common\models\LoginForm;
 /**
  * Site controller
  */
-class SiteController extends BaseController
+class SiteController extends CommonController
 {
     /**
      * @inheritdoc
