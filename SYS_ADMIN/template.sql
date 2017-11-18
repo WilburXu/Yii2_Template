@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-11-15 14:24:16
+Date: 2017-11-18 21:37:35
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -108,13 +108,20 @@ INSERT INTO `sys_auth_item` VALUES ('/admin/user/reset-password', '2', null, nul
 INSERT INTO `sys_auth_item` VALUES ('/admin/user/signup', '2', null, null, null, '1508894470', '1508894470');
 INSERT INTO `sys_auth_item` VALUES ('/admin/user/view', '2', null, null, null, '1508894470', '1508894470');
 INSERT INTO `sys_auth_item` VALUES ('/base/*', '2', null, null, null, '1508894470', '1508894470');
+INSERT INTO `sys_auth_item` VALUES ('/common/*', '2', null, null, null, '1510800626', '1510800626');
+INSERT INTO `sys_auth_item` VALUES ('/demo/*', '2', null, null, null, '1510800626', '1510800626');
+INSERT INTO `sys_auth_item` VALUES ('/demo/index', '2', null, null, null, '1510800626', '1510800626');
+INSERT INTO `sys_auth_item` VALUES ('/echarts/*', '2', null, null, null, '1510800571', '1510800571');
+INSERT INTO `sys_auth_item` VALUES ('/echarts/pie', '2', null, null, null, '1510800618', '1510800618');
 INSERT INTO `sys_auth_item` VALUES ('/home/*', '2', null, null, null, '1508894470', '1508894470');
 INSERT INTO `sys_auth_item` VALUES ('/home/index', '2', null, null, null, '1508894470', '1508894470');
 INSERT INTO `sys_auth_item` VALUES ('/login/*', '2', null, null, null, '1508906174', '1508906174');
+INSERT INTO `sys_auth_item` VALUES ('/login/captcha', '2', null, null, null, '1510800626', '1510800626');
 INSERT INTO `sys_auth_item` VALUES ('/login/error', '2', null, null, null, '1508906174', '1508906174');
 INSERT INTO `sys_auth_item` VALUES ('/login/index', '2', null, null, null, '1508906174', '1508906174');
 INSERT INTO `sys_auth_item` VALUES ('/login/login', '2', null, null, null, '1508906174', '1508906174');
 INSERT INTO `sys_auth_item` VALUES ('/login/logout', '2', null, null, null, '1508906174', '1508906174');
+INSERT INTO `sys_auth_item` VALUES ('/login/register', '2', null, null, null, '1510800626', '1510800626');
 INSERT INTO `sys_auth_item` VALUES ('/site/*', '2', null, null, null, '1508894470', '1508894470');
 INSERT INTO `sys_auth_item` VALUES ('/site/error', '2', null, null, null, '1508894470', '1508894470');
 INSERT INTO `sys_auth_item` VALUES ('/site/index', '2', null, null, null, '1508894470', '1508894470');
@@ -196,18 +203,27 @@ INSERT INTO `sys_auth_item_child` VALUES ('admin', '/admin/user/reset-password')
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/admin/user/signup');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/admin/user/view');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/base/*');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/common/*');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/demo/*');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/demo/index');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/echarts/*');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/echarts/pie');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/home/*');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/home/index');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/login/*');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/login/captcha');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/login/error');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/login/index');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/login/login');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/login/logout');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/login/register');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/site/*');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/site/error');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/site/index');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/site/login');
 INSERT INTO `sys_auth_item_child` VALUES ('admin', '/site/logout');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/text/*');
+INSERT INTO `sys_auth_item_child` VALUES ('admin', '/text/index');
 
 -- ----------------------------
 -- Table structure for sys_auth_rule
@@ -253,7 +269,7 @@ CREATE TABLE `sys_menu` (
   PRIMARY KEY (`id`),
   KEY `parent` (`parent`),
   CONSTRAINT `sys_menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `sys_menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -268,6 +284,8 @@ INSERT INTO `sys_menu` VALUES ('7', '路由', '2', '/admin/route/index', '5', nu
 INSERT INTO `sys_menu` VALUES ('8', '规则', '2', '/admin/rule/index', '6', null);
 INSERT INTO `sys_menu` VALUES ('9', '菜单', '2', '/admin/menu/index', '7', null);
 INSERT INTO `sys_menu` VALUES ('10', '富文本（未完成）', null, '/text/index', '2', null);
+INSERT INTO `sys_menu` VALUES ('11', 'Echarts统计图', null, null, '3', null);
+INSERT INTO `sys_menu` VALUES ('12', '饼图', '11', '/echarts/pie', '1', null);
 
 -- ----------------------------
 -- Table structure for sys_migration
@@ -308,7 +326,7 @@ CREATE TABLE `sys_user` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `password_reset_token` (`password_reset_token`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of sys_user
