@@ -51,6 +51,12 @@ return [
             'showScriptName' => false,
             'rules' => [
             ],
+//            'enablePrettyUrl' => true,
+//            'enableStrictParsing' => true,
+//            'showScriptName' => false,
+//            'rules' => [
+//                ['class' => 'yii\rest\UrlRule', 'controller' => 'api'],
+//            ],
         ],
         'db' => [
             'class' => 'yii\db\Connection',
